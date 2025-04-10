@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:where(a[href]) {
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr min(960px, 100%) 1fr;
+  row-gap: 32px;
+  color: #1a1a1a;
+}
+
+body > * {
+  grid-column: 2;
+}
+
+nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 16px;
+}
+
+nav > ul {
+  flex-wrap: wrap;
+  gap: 2ch;
+  list-style-type: none;
+}
+
+section {
+  padding-inline: 24px;
+}
+
+#sobre {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+#sobre img {
+  border-radius: 16px;
+  width: clamp(250px, 100%, 300px);
+  flex-grow: 2;
+  max-height: 300px;
+}
+
+#sobre div {
+  display: grid;
+  gap: 16px;
+}
+
+#sobre p {
+  max-width: 60ch;
+}
+
+#galeria {
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#galeria h2 {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+
+#galeria img {
+  height: 300px;
+}
+
+#contato {
+  padding-block: 32px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  display: grid;
+  gap: 16px;
+}
+
+.btn {
+  background-color: hsl(209, 72%, 44%);
+  border-radius: 8px;
+  color: white;
+  padding: 1em 0.8em;
+  max-width: fit-content;
+  text-decoration: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-16px, -24px);
+  transition: background 200ms ease-in-out;
+
+  &:hover {
+    background-color: hsl(209, 76%, 23%);
+  }
+}
